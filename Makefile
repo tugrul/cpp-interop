@@ -1,7 +1,7 @@
 
-CC					=	gcc
-PP					=	g++
-LD					=	g++
+CC	=	gcc
+PP	=	g++
+LD	=	g++
 
 all: main
 	
