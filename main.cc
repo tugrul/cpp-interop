@@ -1,7 +1,7 @@
 
 #include <iostream>
 
-#include "ex_shape.hh"
+#include "ex_point.hh"
 
 using namespace std;
 
