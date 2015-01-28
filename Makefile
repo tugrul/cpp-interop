@@ -6,13 +6,16 @@ LD	=	g++
 all: main
 	
 
-main: main.o older.o
-	${LD} -o main older.o main.o
+main: older.o ex_point.o main.o
+	${LD} -o main older.o ex_point.o main.o
 	
 older.o: older.c older.h
 	${CC} -Wall -g -c older.c
 
-main.o: main.cc older.h ex_shape.hh
+ex_point.o: older.h ex_point.hh ex_point.cc 
+	${PP} -Wall -g -std=c++11 -c ex_point.cc
+	
+main.o: older.h ex_point.hh main.cc
 	${PP} -Wall -g -std=c++11 -c main.cc
 
 clean:
